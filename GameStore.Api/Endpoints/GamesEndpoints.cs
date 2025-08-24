@@ -8,7 +8,7 @@ public static class GamesEndpoints
     const string GetGameEndpointName = "GetGame";
 
     private static readonly List<GameDto> games = [
-        new (1, "The Legend of Zelda: Breath of the Wild", "Action-adventure", 59.99m, new DateOnly(2017, 3, 3)),
+    new (1, "The Legend of Zelda: Breath of the Wild", "Action-adventure", 59.99m, new DateOnly(2017, 3, 3)),
     new (2, "God of War", "Action-adventure", 49.99m, new DateOnly(2018, 4, 20)),
     new (3, "Red Dead Redemption 2", "Action-adventure", 39.99m, new DateOnly(2018, 10, 26)),
     new (4, "The Witcher 3: Wild Hunt", "Action RPG", 29.99m, new DateOnly(2015, 5, 19)),
@@ -43,7 +43,8 @@ public static class GamesEndpoints
             games.Add(game);
 
             return Results.CreatedAtRoute(GetGameEndpointName, new { id = game.Id }, game);
-        });
+        })
+        .WithParameterValidation();
 
         //Put /games
         group.MapPut("/{id}", (int id, UpdateGameDto updatedGame) =>
@@ -63,7 +64,8 @@ public static class GamesEndpoints
                 updatedGame.ReleaseDate);
 
             return Results.NoContent();
-        });
+        })
+        .WithParameterValidation();
 
         //Delete /games/1
         group.MapDelete("/{id}", (int id) =>
