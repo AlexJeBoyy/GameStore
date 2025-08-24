@@ -1,29 +1,29 @@
 GET http://localhost:5200/games
 
 ###
-GET http://localhost:5200/games/4
+GET http://localhost:5200/games/3
 
 ###
 POST http://localhost:5200/games
 Content-Type: application/json
 
 {
-    "name": "Deep Rock Galactic",
-    "genre": "FPS, Co-op, Sci-fi",
-    "price": 29.99,
-    "releaseDate": "2020-05-13"
-}
-
-###
-PUT http://localhost:5200/games/1
-Content-Type: application/json
-
-{
     "name": "The Legend of Zelda: Breath of the Wild",
-    "genre": "Action-adventure, Open world",
+    "genreId": 2,
     "price": 59.99,
     "releaseDate": "2017-03-03"
 }
 
 ###
-DELETE  http://localhost:5200/games/2
+PUT http://localhost:5200/games/3
+Content-Type: application/json
+
+{
+    "name": "The Legend of Zelda: Breath of the Wild",
+    "genreId": 2,
+    "price": 59.99,
+    "releaseDate": "2017-03-03"
+}
+
+###
+DELETE  http://localhost:5200/games/4
