@@ -1,0 +1,39 @@
+# This .gitignore file should be placed at the root of your Unity project directory
+#
+# Get latest from https://github.com/github/gitignore/blob/main/Unity.gitignore
+#
+# Database files
+*.db
+*.mdf
+*.ldf
+*.sdf
+
+# Build outputs
+bin/
+obj/
+[Bb]uild/
+[Bb]uildOutput/
+
+# NuGet packages
+*.nupkg
+.nuget/
+
+# User-specific files
+*.user
+*.suo
+*.userprefs
+
+# IDE files
+.vs/
+.idea/
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
