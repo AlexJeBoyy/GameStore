@@ -1,11 +1,12 @@
 GET http://localhost:5200/games
 
 ###
-GET http://localhost:5200/games/1
+GET http://localhost:5200/games/4
 
 ###
 POST http://localhost:5200/games
 Content-Type: application/json
+
 {
     "name": "Deep Rock Galactic",
     "genre": "FPS, Co-op, Sci-fi",
@@ -16,6 +17,7 @@ Content-Type: application/json
 ###
 PUT http://localhost:5200/games/1
 Content-Type: application/json
+
 {
     "name": "The Legend of Zelda: Breath of the Wild",
     "genre": "Action-adventure, Open world",
